@@ -19,7 +19,7 @@ class Login(BaseModel):
 USERID = 'user'
 PASSWORD = '1234'
 
-@app.post('/login/userid/{user_id}/password/{pwd}')
+@app.post('/login/')
 async def login(login:Login):
     if login.user_id != USERID:
         return {'message': '사용자 아이디가 다릅니다.'}
